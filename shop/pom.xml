@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+
+  <groupId>cn.wolfcode.shop</groupId>
+  <artifactId>shop-parent</artifactId>
+  <packaging>pom</packaging>
+  <version>1.0-SNAPSHOT</version>
+  <modules>
+    <module>shop-common</module>
+    <module>member-api</module>
+    <module>member-server</module>
+    <module>goods-api</module>
+    <module>goods-server</module>
+    <module>seckill-api</module>
+    <module>seckill-server</module>
+    <module>seckill-website</module>
+    <module>websocket-server</module>
+  </modules>
+
+  <parent>
+    <groupId>org.springframework.boot</groupId>
+    <artifactId>spring-boot-starter-parent</artifactId>
+    <version>2.0.4.RELEASE</version>
+    <relativePath/>
+  </parent>
+
+  <name>shop-parent</name>
+  <!-- FIXME change it to the project's website -->
+  <url>http://www.example.com</url>
+
+  <properties>
+    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    <maven.compiler.source>1.8</maven.compiler.source>
+    <maven.compiler.target>1.8</maven.compiler.target>
+  </properties>
+
+  <dependencyManagement>
+    <!--g公共依赖-->
+    <dependencies>
+      <dependency>
+        <groupId>cn.wolfcode.shop</groupId>
+        <artifactId>shop-common</artifactId>
+        <version>1.0-SNAPSHOT</version>
+      </dependency>
+      <!--会员api依赖-->
+      <dependency>
+        <groupId>cn.wolfcode.shop</groupId>
+        <artifactId>member-api</artifactId>
+        <version>1.0-SNAPSHOT</version>
+      </dependency>
+      <!--商品依赖-->
+      <dependency>
+        <groupId>cn.wolfcode.shop</groupId>
+        <artifactId>goods-api</artifactId>
+        <version>1.0-SNAPSHOT</version>
+      </dependency>
+      <!--秒杀依赖-->
+      <dependency>
+        <groupId>cn.wolfcode.shop</groupId>
+        <artifactId>seckill-api</artifactId>
+        <version>1.0-SNAPSHOT</version>
+      </dependency>
+      <!--阿里巴巴的druid-->
+      <dependency>
+        <groupId>com.alibaba</groupId>
+        <artifactId>druid</artifactId>
+        <version>1.1.10</version>
+      </dependency>
+      <!--spring-boot的mybatis依赖-->
+      <dependency>
+        <groupId>org.mybatis.spring.boot</groupId>
+        <artifactId>mybatis-spring-boot-starter</artifactId>
+        <version>1.2.0</version>
+      </dependency>
+      <!--dubbo相关依赖-->
+      <dependency>
+        <groupId>com.alibaba.boot</groupId>
+        <artifactId>dubbo-spring-boot-starter</artifactId>
+        <version>0.2.0</version>
+      </dependency>
+    </dependencies>
+
+  </dependencyManagement>
+
+
+</project>

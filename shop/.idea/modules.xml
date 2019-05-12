@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/goods-api/goods-api.iml" filepath="$PROJECT_DIR$/goods-api/goods-api.iml" />
+      <module fileurl="file://$PROJECT_DIR$/goods-server/goods-server.iml" filepath="$PROJECT_DIR$/goods-server/goods-server.iml" />
+      <module fileurl="file://$PROJECT_DIR$/member-api/member-api.iml" filepath="$PROJECT_DIR$/member-api/member-api.iml" />
+      <module fileurl="file://$PROJECT_DIR$/member-server/member-server.iml" filepath="$PROJECT_DIR$/member-server/member-server.iml" />
+      <module fileurl="file://$PROJECT_DIR$/seckill-api/seckill-api.iml" filepath="$PROJECT_DIR$/seckill-api/seckill-api.iml" />
+      <module fileurl="file://$PROJECT_DIR$/seckill-server/seckill-server.iml" filepath="$PROJECT_DIR$/seckill-server/seckill-server.iml" />
+      <module fileurl="file://$PROJECT_DIR$/seckill-website/seckill-website.iml" filepath="$PROJECT_DIR$/seckill-website/seckill-website.iml" />
+      <module fileurl="file://$PROJECT_DIR$/shop.iml" filepath="$PROJECT_DIR$/shop.iml" />
+      <module fileurl="file://$PROJECT_DIR$/shop-common/shop-common.iml" filepath="$PROJECT_DIR$/shop-common/shop-common.iml" />
+      <module fileurl="file://$PROJECT_DIR$/websocket-server/websocket-server.iml" filepath="$PROJECT_DIR$/websocket-server/websocket-server.iml" />
+    </modules>
+  </component>
+</project>

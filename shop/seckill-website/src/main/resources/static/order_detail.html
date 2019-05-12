@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>订单列表</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <!-- jquery -->
+    <script type="text/javascript" src="/js/jquery.min.js"></script>
+    <!-- bootstrap -->
+    <link rel="stylesheet" type="text/css" href="/bootstrap/css/bootstrap.min.css" />
+    <script type="text/javascript" src="/bootstrap/js/bootstrap.min.js"></script>
+    <!-- jquery-validator -->
+    <script type="text/javascript" src="/jquery-validation/jquery.validate.min.js"></script>
+    <script type="text/javascript" src="/jquery-validation/localization/messages_zh.min.js"></script>
+    <!-- layer -->
+    <script type="text/javascript" src="/layer/layer.js"></script>
+    <!-- md5.js -->
+    <script type="text/javascript" src="/js/md5.min.js"></script>
+    <!-- common.js -->
+    <script type="text/javascript" src="/js/common.js"></script>
+</head>
+<body>
+<div class="panel panel-default"  style="height:100%;background-color:rgba(222,222,222,0.8)">
+    <div class="panel-heading">秒杀订单详情</div>
+    <table class="table" id="goodslist">
+        <tr>
+            <td>商品名称</td>
+            <td colspan="3" id="goodName"></td>
+        </tr>
+        <tr>
+            <td>商品图片</td>
+            <td colspan="2"><img id="goodImg"  width="200" height="200" /></td>
+        </tr>
+        <tr>
+            <td>订单价格</td>
+            <td colspan="2" id="seckillPrice"></td>
+        </tr>
+        <tr>
+            <td>下单时间</td>
+            <td id="createDate" colspan="2"></td>
+        </tr>
+        <tr>
+            <td>订单状态</td>
+            <td id="status1" style="display:none">
+                未支付
+            </td>
+            <td>
+                <button class="btn btn-primary btn-block" type="submit" id="payButton">立即支付</button>
+            </td>
+            <td id="status2" style="display: none">
+                已支付
+            </td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>收货人</td>
+            <td colspan="2">叩丁狼  13088889999</td>
+        </tr>
+        <tr>
+            <td>收货地址</td>
+            <td colspan="2">广州市天河区棠下街道涌东路大地商务港603</td>
+        </tr>
+    </table>
+</div>
+</body>
+<script>
+    $(function () {
+       var goodId =  getQueryString("goodId");
+        $.ajax({
+            url:"/seckill/do_detail",
+            data:{goodId:goodId},
+            typr:"POST",
+            success:function (data) {
+                $("#goodName").html(data.goods.goodName)
+                $("#goodImg").prop("src",data.goods.goodImg)
+                $("#seckillPrice").html(data.order.seckillPrice)
+                $("#createDate").html(data.order.createDate)
+                if(data.order.status==0){
+                   $("#status1").prop("style","display:list-item")
+                }else{
+                    $("#status2").prop("style","display:list-item")
+                }
+            }
+        })
+    })
+</script>
+
+</html>

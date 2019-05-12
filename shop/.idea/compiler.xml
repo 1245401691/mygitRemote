@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile default="true" name="Default" enabled="true" />
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="goods-api" />
+        <module name="goods-server" />
+        <module name="member-api" />
+        <module name="member-server" />
+        <module name="seckill-api" />
+        <module name="seckill-server" />
+        <module name="seckill-website" />
+        <module name="seckillserver" />
+        <module name="shop-common" />
+        <module name="websocket" />
+        <module name="websocket-server" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="goods-api" target="1.8" />
+      <module name="goods-server" target="1.8" />
+      <module name="member-api" target="1.8" />
+      <module name="member-server" target="1.8" />
+      <module name="seckill-api" target="1.8" />
+      <module name="seckill-server" target="1.8" />
+      <module name="seckill-website" target="1.8" />
+      <module name="seckillserver" target="1.7" />
+      <module name="shop" target="1.8" />
+      <module name="shop-common" target="1.8" />
+      <module name="websocket" target="1.7" />
+      <module name="websocket-server" target="1.7" />
+    </bytecodeTargetLevel>
+  </component>
+</project>
