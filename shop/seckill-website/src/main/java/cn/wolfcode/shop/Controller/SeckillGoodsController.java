@@ -21,7 +21,7 @@ import java.io.StringWriter;
 import java.util.*;
 
 @Controller
-@RequestMapping("/goods")
+@RequestMapping("/goods1")
 public class SeckillGoodsController {
     @Reference
     private ISeckillService seckillService;
